@@ -40,7 +40,7 @@ function listarPorEvento(req, res) {
 }
 
 // PATCH /inscricoes/:id/cancelar - cancelar uma inscrição
-function cancelar(req, res) {
+function destroy(req, res) {
   const id = parseInt(req.params.id);
   // Implementado: usa InscricaoModel.cancelar()
   const inscricaoCancelada = InscricaoModel.cancelar(id);
@@ -53,4 +53,4 @@ function cancelar(req, res) {
   res.json(inscricaoCancelada);
 }
 
-module.exports = { store, index, listarPorEvento, cancelar };
+module.exports = { store, index, listarPorEvento, destroy };
